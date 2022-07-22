@@ -1,0 +1,13 @@
+<div class="user-story" [ngClass] ="{'active': isActive }">
+    <div class="title">
+        <img src="../../../assets/icons/book.svg" alt="">
+        <div class="ticket">
+            <p class="ticket-id">{{name}}</p>
+            <img src="../../../assets/icons/jira.svg" alt="" *ngIf="showIcon">
+        </div>
+        
+        <p class="status" [ngClass] ="{'review': status === 'Review','done': status === 'Done','dev-done': status === 'Dev Done' }">{{status}}</p>
+        <button class="trace">Trace</button>
+    </div>
+    <p>As a use, I should have an option to run Ransomware testing for my DB-Table, Database and Column so that how fast....</p>
+</div>

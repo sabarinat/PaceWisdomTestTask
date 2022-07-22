@@ -1,0 +1,58 @@
+<div class="page">
+  <div class="sidemenu">
+    <div class="logo">
+      <img src="../assets/sidemenu/Group 47643.svg" alt="" />
+    </div>
+    <div class="icons">
+      <img *ngFor="let image of images; let i = index" [src]="image" alt="" [ngClass] ="{'selected-side-menu': i === selectedMenuIndex}" (click)="selectMenu(i)"/>     
+      
+    </div>
+    <img src="../assets/icons/user.svg" alt="" class="user-logo" />
+  </div>
+  <div class="page-content">
+    <app-header></app-header>
+    <div class="content-container">
+      <div class="user-stories">
+        <div class="user-heading">
+          <h2>User Stories List</h2>
+          <div class="add"><img src="../assets/icons/add.svg" alt="" /></div>
+        </div>
+
+        <div class="search-input">
+
+        <div class="filters">
+
+        
+          <input type="text" placeholder="Search / Filter">
+          <img src="../assets/icons/funnel.svg" alt="" />
+        </div>
+
+        </div>
+
+        <app-user-story
+          *ngFor="let data of mockData; let i =index"
+          [name]="data.name"
+          [status]="data.status"
+          [showIcon]="data.showIcon"
+          [isActive]="i === selectedUserStory"
+          (click)="selectUserStory(i)"
+        ></app-user-story>
+      </div>
+      <div class="user-story-details">
+        <h2>Summary : WAT- 936</h2>
+        <div class="test-widget">
+          <app-results-widget title="Test Cases"></app-results-widget>
+          <app-results-widget title="Test Packs"></app-results-widget>
+        </div>
+        <div class="warning-text">
+          <img src="../assets/icons/warning.svg" alt="">
+          <p>Test Cases are not modified since user story edit on 20th May 2022</p>
+        </div>
+
+        <app-result-table></app-result-table>
+
+        
+      </div>
+    </div>
+  </div>
+</div>

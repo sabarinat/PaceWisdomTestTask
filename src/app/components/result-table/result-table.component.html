@@ -1,0 +1,74 @@
+<div class="result-table">
+  <div class="table-header">
+    <div class="filters">
+      <app-chip
+        name="TEST CASES"
+        [isActive]="selectedIndex === 0"
+        (click)="switchTab(0)"
+      ></app-chip>
+      <app-chip
+        name="TEST PACKS"
+        [isActive]="selectedIndex === 1"
+        (click)="switchTab(1)"
+      ></app-chip>
+    </div>
+    <div class="icons">
+      <div class="add"><img src="../../../assets/icons/add.svg" alt="" /></div>
+      <img src="../../../assets/icons/Upload.svg" alt="" />
+      <img src="../../../assets/icons/maximize.svg" alt="" />
+    </div>
+  </div>
+  <div class="table-responsive">
+  <table cellspacing="0">
+    <thead>
+      <tr>
+        <th><input type="checkbox" /></th>
+        <th>ID</th>
+        <th>Summary</th>
+        <th>Status</th>
+        <th>Mode</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let number of [1,2,3]">
+        <td>
+          <input type="checkbox" />
+        </td>
+
+        <td><p class="id">Payment _RTGS Outward_09_TC_01</p></td>
+        <td>
+          <strong
+            >Verfiy if user is aable to initiate RTGS Outward payment for below
+            combination</strong
+          >
+          <div class="details">
+            <p>
+                Customer Type: <strong>Corporate</strong>
+                Payment Type:  <strong>RTGS</strong>
+                Requested Execution Date:   <strong>Back Date </strong>
+                Instrument Type:  <strong>CHQ </strong>
+                Instrument Date:  <strong>Back Date   </strong>
+                Remittance Amount:  <strong> <2 Lac     </strong>
+                    Credit Excution Date:  <strong> Today's Date    </strong>
+                    Beneficary Customer Acct Type:    <strong> SA  </strong>
+                    Charge option:      <strong> Our  </strong>
+                    Waive Charges:     <strong> No  </strong>
+            </p>
+
+
+          </div>
+        </td>
+        <td>
+            <div class="status">
+                Automated
+                <img src="../../../assets/icons/tridots.svg" alt="" />
+            </div>
+        </td>
+        <td>
+            <img src="../../../assets/icons/settings.svg" alt="" />
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>

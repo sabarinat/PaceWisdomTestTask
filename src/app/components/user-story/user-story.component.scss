@@ -1,0 +1,74 @@
+$font: 'Nunito', sans-serif;
+
+.user-story {
+    border-bottom: 1px solid #D0D9E9;
+    cursor: pointer;
+
+    &.active {
+        border-left: 2px solid #82DDBC;
+        background-color: #F4F7F8;
+    }
+
+
+    .title {
+        display: grid;
+    grid-template-columns: 40px 7.81vw 2fr 0.5fr;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+
+        .ticket {
+            display: flex;
+            justify-content: flex-start;
+
+            .ticket-id {
+                color: #3448FA;
+                font-size: 14px;
+                font-family: $font;
+                font-weight: 700;
+                text-align: start;
+            }
+        }
+
+        .status {
+            border-radius: 8px;
+            font-size: 11px;
+            font-family: "Nunito", sans-serif;
+            padding: 4px 10px;
+            font-weight: 700;
+            text-align: center;
+            width: 80px;
+            margin: 0 7px;
+
+            &.review {
+                background-color: #FFD89F;
+
+            }
+
+            &.dev-done {
+                background-color: #D3D2FC;
+            }
+            &.done {
+                background-color: #B2E3FF;
+            }
+        }
+
+        .trace {
+            background-color: #FFF;
+            border: 2px solid #3D455B;
+            font-family: $font;
+            font-size: 11px;
+            border-radius: 8px;
+        }
+
+    }
+
+    p {
+        margin: 12px 0 6px 0;
+        font-size: 12px;
+        padding: 0 10px;
+        color: #3D455B;
+        font-family: $font;
+
+    }
+}

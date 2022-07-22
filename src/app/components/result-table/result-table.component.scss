@@ -1,0 +1,113 @@
+$font: 'Nunito', sans-serif;
+
+.result-table {
+
+    .table-header {
+        display: flex;
+        align-items: center;
+        height: 40px;
+        justify-content: space-between;
+        padding: 0 5px;
+
+        .filters {
+            display: flex;
+            gap: 20px;
+        }
+
+        .icons {
+            display: flex;
+            gap: 20px;
+
+            .add {
+                background-color: #27B69C;
+                width: 26px;
+                height: 26px;
+                color: #FFF;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 26px;
+                font-family: $font;
+                font-weight: 700;
+                
+                cursor: pointer;
+                img {
+                    width: 12px;
+                }
+
+            }
+
+            img {
+                width: 24px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    table {
+        width: 100%;
+        margin-top: 15px;
+
+        thead {
+            th {
+                background: #EFF2F6;
+                font-size: 14px;
+                height: 5.76vh;
+                font-family: $font;
+                font-weight: 600;
+                border-top: 1px solid #D0D5DE;
+                border-bottom: 1px solid #D0D5DE;
+            }
+        }
+
+        tbody {
+            tr {
+                
+                td {
+                    padding: 10px;
+                    border-bottom: 1px solid #D0D9E9;
+                    .id {
+                        color: #3448FA;
+                    }
+                    .details {
+                        strong {
+                            margin: 0;
+                            font-size: 14px;
+                        }
+
+                        p {
+                            width: fit-content;
+                            margin: 0;
+                            font-size: 14px;
+                        }
+                    }
+                    
+                    .status {
+                        display: flex;
+                        gap: 20px;
+                        border: 2px solid #3D455B;
+                        border-radius: 6px;
+                        padding:  5px;
+                        color: #3D455B;
+                        font-family: $font;
+                        font-weight: 700;
+                        font-size: 1.17vh;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:1200px){
+    .table-responsive{
+        max-width: 100%;
+        width: 100R;
+        overflow-x: auto;
+
+        table{
+            width: 1000px;
+        }
+    }
+}

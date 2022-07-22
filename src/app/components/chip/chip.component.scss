@@ -1,0 +1,49 @@
+$font: 'Nunito', sans-serif;
+
+.chip {
+    
+    padding: 2px 10px;
+    border-radius: 10px;
+    position: relative;
+    width: 100px;
+    text-align: center;
+    cursor: pointer;
+
+    &.active {
+        background-color: #FD346E;
+        img {
+            position: absolute;
+            width: 16px;
+            bottom: -9px;
+            left: calc(60% - 16px);
+        }
+    
+    }
+
+    &.inactive {
+        background-color: #3D455B;
+        img {
+            display: none
+        };
+
+    }
+
+
+
+
+
+    p {
+        color: #fff;
+        font-family: $font;
+        margin: 0;
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+    img {
+        position: absolute;
+        width: 16px;
+        bottom: -9px;
+        left: calc(60% - 16px);
+    }
+
+}

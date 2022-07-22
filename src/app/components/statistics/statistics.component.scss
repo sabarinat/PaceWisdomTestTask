@@ -1,0 +1,45 @@
+$font: 'Nunito', sans-serif;
+
+.data {
+    color: #3D455B;
+    font-size: 16px;
+    font-family: $font;
+    margin: 0;
+    border-right: 1px solid #D0D9E9;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    padding:  0 20px;
+
+    .title {
+        margin: 18px 0 0 0;
+        font-size: 16px;
+        font-family: $font;
+        font-weight: 700;
+        color: #3D455B;
+
+    }
+
+    .result {
+        margin: 18px 0 18px 0;
+        font-weight: 400;
+
+        &.success {
+            color: #0FBC93;
+
+        }
+
+        &.failure {
+           color: #FD346E;
+        }
+    }
+
+}
+
+@media(max-width:1200px){
+    .data{
+        padding: 0 10px;
+    }
+}

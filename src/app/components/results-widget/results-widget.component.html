@@ -1,0 +1,10 @@
+<div class="results">
+    <p class="title">
+       {{title}}
+    </p>
+    <div class="results-data">
+        <div *ngFor="let result of testCases" class="sub-result-data">
+            <app-statistics  [title]="result.name" [value]="result.value" [type]="result.type"></app-statistics>
+        </div>
+    </div>
+</div>
